@@ -11,11 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130812181708) do
+ActiveRecord::Schema.define(:version => 20130812214941) do
 
   create_table "accounts", :force => true do |t|
     t.integer "total"
-    t.integer "name"
+    t.string  "name"
+  end
+
+  create_table "transactions", :force => true do |t|
+    t.string   "type"
+    t.string   "memo"
+    t.integer  "accounts_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
 end

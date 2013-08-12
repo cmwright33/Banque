@@ -7,6 +7,6 @@ class CreateAccountTable < ActiveRecord::Migration
   end
 
   def down
-    droup_table :accounts
+    drop_table :accounts
   end
 end

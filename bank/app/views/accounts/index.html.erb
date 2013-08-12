@@ -1,9 +1,17 @@
 <h5>This is the bank!</h5>
 
-
+<div>
   <% @accounts.each do |account| %>
     <%= account.name %>
      <%= account.total %>
     <% end %>
-
+</div>
 <!-- should have Main Accounts displaying and lists each account balance including button to display withdraw and transfers, Add an Account and Deposit -->
+
+
+
+<%= button_to 'Withdraw/Transfer', { :action => 'withdraw'}, :method => :get, remote: true %>
+<%= button_to 'Add An Account', method: "get", remote: true%>
+<%= button_to 'Deposit', method: 'get', remote: true%>
+
+<div class="new-account"></div>

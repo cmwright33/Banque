@@ -7,6 +7,9 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-Account.new(name: 'account_1', total:  10000)
-Account.new(name: 'account_2', total:  100320)
-Account.new(name: 'account_3', total: 10023240)
+Account.create(:name => 'account_1', :total =>  10000)
+Account.create(:name => 'account_2', :total =>  100320)
+Account.create(:name => 'account_3', :total => 10023240)
+
+
+Transaction

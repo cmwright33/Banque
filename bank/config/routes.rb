@@ -1,8 +1,10 @@
 Bank::Application.routes.draw do
 
 root :to => 'accounts#index'
-
+get '/' => 'accounts#withdraw'
 resources :accounts
+
+# get '/', to: 'accounts#withdraw', as: :logout
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
