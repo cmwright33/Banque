@@ -1,5 +1,0 @@
-class BankController < ApplicationController
-
-
-
-end
