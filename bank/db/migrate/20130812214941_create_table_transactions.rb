@@ -1,7 +1,7 @@
 class CreateTableTransactions < ActiveRecord::Migration
   def up
     create_table :transactions do |t|
-      t.string :type
+      t.string :typeof
       t.string :memo
       t.references :accounts
 

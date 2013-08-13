@@ -12,4 +12,7 @@ Account.create(:name => 'account_2', :total =>  100320)
 Account.create(:name => 'account_3', :total => 10023240)
 
 
-Transaction
+Transaction.create(:typeof => 'Deposit', :memo => "Birthday", :accounts_id => 1)
+Transaction.create(:typeof => 'Withdraw', :memo => "Fun!", :accounts_id => 2)
+Transaction.create(:typeof => 'Withdraw', :memo => "Lunch", :accounts_id => 1)
+Transaction.create(:typeof => 'Deposit', :memo => "Bank Robbery", :accounts_id => 3)

@@ -1,7 +1,9 @@
 Bank::Application.routes.draw do
 
 root :to => 'accounts#index'
-get '/' => 'accounts#withdraw'
+get '/withdraw' => 'accounts#withdraw'
+get '/newaccount' => 'accounts#new'
+get '/deposit' => 'accounts#deposit'
 resources :accounts
 
 # get '/', to: 'accounts#withdraw', as: :logout
