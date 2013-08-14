@@ -25,7 +25,7 @@ class AccountsController < ApplicationController
 
 
   def withdraw
-    @accoutn = Account.find(params[:id])
+    @accounts = Account.all
 
   end
 

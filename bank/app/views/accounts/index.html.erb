@@ -1,16 +1,16 @@
 <h5>This is the bank!</h5>
 
-<div class="accounts">
+<div id="accounts">
   <% @accounts.each do |account| %>
     <%= account.name %>
      <%= account.total %>
     <% end %>
 </div>
 <!-- should have Main Accounts displaying and lists each account balance including button to display withdraw and transfers, Add an Account and Deposit -->
-<div class="withdraw"></div>
-<div class="depositForm"></div>
-<div class="add-account"></div>
-<button id="withdraw/transfer">'Withdraw/Transfer'</button>
+<div id="withdraw"></div>
+<div id="depositForm"></div>
+<div id="add-account"></div>
+<button id="withdraw-transfer">'Withdraw/Transfer'</button>
 <button id="add-account">'Add An Account' </button>
 <button id="deposit">deposit</button>
 

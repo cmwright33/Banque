@@ -1,7 +1,8 @@
 <form>
-  Amount: <input type="text" name="amount" id="withdraw">
-  Account:<% @accounts.each do |account| %>
+  Amount: <input type="text" name="amount">
+  Account:
           <select>
+            <% @accounts.each do |account| %>
             <option value="value"><%=account.name%></option>
             <% end %>
           </select>

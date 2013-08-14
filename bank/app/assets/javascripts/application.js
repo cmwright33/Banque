@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require_tree .
 
+
+
 var AccountApp = {
   accountsArray: [],
   showAccounts: function(){
@@ -43,7 +45,23 @@ var AccountApp = {
         });
     },
 
+      showWithdraw: function(){
+        console.log('click');
+        $.ajax({
+          url: '/withdraw',
+          type: 'get',
+          dataType: 'script'
+        });
+      },
 
+      showNew: function(){
+        console.log('click');
+        $.ajax({
+          url: '/new',
+          type: 'get',
+          dataType: 'script'
+        });
+      },
 
       addDepositAmount: function(){
       $('.depositAmountButton').click(function(){
@@ -63,15 +81,10 @@ var AccountApp = {
 };
 
 
-
-
-
-
-
-
 $(function () {
 $('#deposit').click(AccountApp.showDeposit);
-
+$('#withdraw-transfer').click(AccountApp.showWithdraw);
+$('#new').click(AccountApp.showNew);
   AccountApp.showAccounts();
 
 
