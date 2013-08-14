@@ -74,8 +74,8 @@ var AccountApp = {
 
       withdrawAmount: function(){
 
-      },
 
+      },
 
 
       addDepositAmount: function(){
