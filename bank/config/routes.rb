@@ -5,6 +5,7 @@ get '/withdraw' => 'accounts#withdraw'
 get '/newaccount' => 'accounts#new'
 get '/deposit' => 'accounts#deposit'
 resources :accounts
+get '/deposit/:id', to: 'accounts#show_account'
 
 # get '/', to: 'accounts#withdraw', as: :logout
   # The priority is based upon order of creation:

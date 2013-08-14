@@ -13,3 +13,66 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+var AccountApp = {
+  accountsArray: [],
+  showAccounts: function(){
+     $.ajax({
+        type: 'get',
+        url: '/',
+        dataType: 'json'
+      }).done(function(data){
+        console.log(data);
+        AccountApp.accountsArray = data;
+        AccountApp.appendAccount();
+      });
+    },
+
+  appendAccount: function(){
+    for(var i = 0; i < AccountApp.accountsArray.length; i ++){
+      $('#accounts').append($('<ul></ul>')).append($('<li>Account: ' + AccountApp.accountsArray[i].id + ', balance: ' + AccountApp.accountsArray[i].balance + '</li>'));}
+      },
+
+
+      showDeposit: function(){
+        console.log('click');
+        $.ajax({
+        url: '/deposit',
+        type: 'get',
+        dataType: 'script'
+        });
+    },
+
+
+
+      addDepositAmount: function(){
+      $('.depositAmountButton').click(function(){
+        event.preventDefault();
+        console.log('click');
+        var account = $('#accountName').val();
+        var amount = $('#depositAmount').val();
+        $.ajax({
+          url: '/deposit/' + account,
+          type: 'post',
+          dataType: 'json'
+        });
+      });
+    }
+
+
+};
+
+
+
+
+
+
+
+
+$(function () {
+$('#deposit').click(AccountApp.showDeposit);
+
+  AccountApp.showAccounts();
+
+
+});

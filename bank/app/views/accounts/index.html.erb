@@ -8,10 +8,11 @@
 </div>
 <!-- should have Main Accounts displaying and lists each account balance including button to display withdraw and transfers, Add an Account and Deposit -->
 <div class="withdraw"></div>
-<div></div>
-<div></div>
-<button><%= link_to 'Withdraw/Transfer', withdraw_path , remote: true %></button>
-<button><%= link_to'Add An Account', new_account_path, remote: true%></button>
-<button><%= link_to 'Deposit', deposit_path, remote: true%><button>
+<div class="depositForm"></div>
+<div class="add-account"></div>
+<button id="withdraw/transfer">'Withdraw/Transfer'</button>
+<button id="add-account">'Add An Account' </button>
+<button id="deposit">deposit</button>
 
 <div class="new-account"></div>
+

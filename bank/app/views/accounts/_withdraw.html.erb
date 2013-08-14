@@ -1,1 +1,9 @@
-this is the withdraw page
+<form>
+  Amount: <input type="text" name="amount" id="withdraw">
+  Account:<% @accounts.each do |account| %>
+          <select>
+            <option value="value"><%=account.name%></option>
+            <% end %>
+          </select>
+
+</form>

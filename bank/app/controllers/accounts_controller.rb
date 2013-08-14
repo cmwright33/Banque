@@ -5,32 +5,29 @@ class AccountsController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.js {}
-      format.json {render :json => @accounts.to_json}
+      format.json {render json: @accounts}
     end
   end
 
-  def show
-
-
-  end
-  def withdraw
-
-
-  end
 
   def deposit
+    respond_to do |format|
+      format.html
+      format.js {}
+    end
+  end
+
+
+  def add_amount
+    @account = Account.find(params[:id])
+    amount_to_add = parseInt(params[:balance])
+  end
+
+
+  def withdraw
+    @accoutn = Account.find(params[:id])
 
   end
 
-  def create
-
-
-  end
-
-  def new
-
-
-  end
 
 end
