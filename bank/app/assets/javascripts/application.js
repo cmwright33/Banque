@@ -32,7 +32,7 @@ var AccountApp = {
 
   appendAccount: function(){
     for(var i = 0; i < AccountApp.accountsArray.length; i ++){
-      $('#accounts').append($('<ul></ul>')).append($('<li>Account: ' + AccountApp.accountsArray[i].id + ', balance: ' + AccountApp.accountsArray[i].balance + '</li>'));}
+      $('#accounts').append($('<ul></ul>')).append($('<li id='+AccountApp.accountsArray[i].id+'>Account: ' + AccountApp.accountsArray[i].name + ', balance: ' + AccountApp.accountsArray[i].total + '</li>'));}
       },
 
 
@@ -62,6 +62,21 @@ var AccountApp = {
           dataType: 'script'
         });
       },
+
+      showAccount: function(){
+        console.log('click');
+        $.ajax({
+          url: '/show',
+          type: 'get',
+          dataType: 'script'
+        });
+      },
+
+      withdrawAmount: function(){
+
+      },
+
+
 
       addDepositAmount: function(){
       $('.depositAmountButton').click(function(){

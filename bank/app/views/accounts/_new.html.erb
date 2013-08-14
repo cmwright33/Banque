@@ -1,13 +1,7 @@
-<h5>New Account</h5>
-
-<% form_for @accounts do |f| %>
-<%= f.text_field :name %><br>
-<%= f.text_field :total %><br>
-<% end %>
-
+<h5>Create a New Account</h5>
 
 <form>
-  <input type="text" name="account" id="accountName">
-  <input type="text" name="Amount" placeholer="Enter money">
+  <input type="text" name="name" id="newAccountName">
+  <input type="text" name="total" placeholer="Enter money" id="newAccountAmount">
   <button>Add an Account</button>
 </form>

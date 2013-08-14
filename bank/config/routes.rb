@@ -4,6 +4,7 @@ root :to => 'accounts#index'
 get '/withdraw' => 'accounts#withdraw'
 get '/newaccount' => 'accounts#new'
 get '/deposit' => 'accounts#deposit'
+get '/new' => 'accounts#new'
 resources :accounts
 get '/deposit/:id', to: 'accounts#show_account'
 

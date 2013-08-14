@@ -18,15 +18,28 @@ class AccountsController < ApplicationController
   end
 
 
-  def add_amount
-    @account = Account.find(params[:id])
-    amount_to_add = parseInt(params[:balance])
+  def create
+
+
+  end
+
+  def new
+    @account = Account.new
+    respond_to do |format|
+      format.html
+      format.js{}
+      format.json {render json: @account}
+    end
   end
 
 
   def withdraw
     @accounts = Account.all
-
+    respond_to do |format|
+      format.html
+      format.js {}
+      format.json {render json: @accounts}
+    end
   end
 
 
